@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
-
+import NameCard from "./NameCard";
 
 export default class NamesList extends Component {
     constructor(props) {
@@ -36,7 +36,7 @@ export default class NamesList extends Component {
         const { id } = name;
         return(
             <NavLink to={`/names/${id}`}>
-                <null name={name}/>
+                <NameCard name={name}/>
             </NavLink>
         );
         }

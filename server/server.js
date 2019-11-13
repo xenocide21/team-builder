@@ -8,11 +8,11 @@ app.use(bodyParser.json());
 app.use(CORS());
 
 const teamNames = [
-	{id:0, title:'Asuna', class: 'Swordswoman'},
-	{id:1, title:'Kirito', class: 'Swordsman'},
-	{id:2, title:'Lisbeth', class: 'Blacksmith'},
-	{id:3, title:'Sinon', class: 'Archer'},
-	{id:4, title:'Leafa', class: 'Swordswoman'}
+	{id:0, title:'Asuna', type: 'Swordswoman'},
+	{id:1, title:'Kirito', type: 'Swordsman'},
+	{id:2, title:'Lisbeth', type: 'Blacksmith'},
+	{id:3, title:'Sinon', type: 'Archer'},
+	{id:4, title:'Leafa', type: 'Swordswoman'}
 ];
 
 app.get('/api/teamNames', (req, res) => {
