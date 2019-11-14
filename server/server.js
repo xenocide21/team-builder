@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(CORS());
 
-const teamNames = [
+let teamNames = [
 	{id:0, title:'Asuna', type: 'Swordswoman'},
 	{id:1, title:'Kirito', type: 'Swordsman'},
 	{id:2, title:'Lisbeth', type: 'Blacksmith'},
