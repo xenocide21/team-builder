@@ -6,14 +6,14 @@ export default class Name extends Component{
     constructor(props){
         super(props);
         this.state = {
-            name: null
+            name: []
         };
-    };
+    }
 
     componentDidMount() {
         const { id } = this.props.match.params;
         this.fetchName(id);
-    };
+    }
 
     fetchName = id => {
         axios
@@ -31,5 +31,9 @@ export default class Name extends Component{
         if (!this.state.name) {
             return <div>Please wait...</div>
         }
+        const { name } = this.state;
+        return(
+            <NameCard name={name}/>
+        )
     }
 }

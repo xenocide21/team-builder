@@ -19,3 +19,20 @@ code {
   border: 1px solid black;
   margin: 2%;
 }
+
+.names-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#form {
+  align-items: center;
+  justify-content: center;
+}
+
+#main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
