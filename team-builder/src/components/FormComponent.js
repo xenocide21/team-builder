@@ -18,7 +18,7 @@ import React, { useState } from 'react';
         return(
             <form onSubmit={subForm}>
                 <label htmlFor="title">Name</label>
-                <input id="name" type="text" name="name" onChange={ChangeHandler} value={teamName.title}/>
+                <input id="name" type="text" name="title" onChange={ChangeHandler} value={teamName.title}/>
                 <label htmlFor="type">Type</label>
                 <input id="type" type="text" name="type" onChange={ChangeHandler} value={teamName.type}/>
                 <button type="submit">Add Name</button>

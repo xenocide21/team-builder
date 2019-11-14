@@ -1,30 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import TeamNames from "./components/TeamNames";
 import { Route } from "react-router-dom"
 import FormComponent from "./components/FormComponent";
 
 function App() {
-  // const [namesList, addNames] = useState([{
-  //   id: 6,
-  //   title: "Example Name",
-  //   type: "Example Type",
-  // }
-  // ]);
-  //
-  // const addNewName = names => {
-  //   const newNames = {
-  //     id: Date.now(),
-  //     title: names.title,
-  //     type: names.type
-  //   };
-  //   addNames([...namesList, newNames])
-  // };
+
+  const [teamName, addTeamName] = useState([{
+    title: "Cilica",
+    type: "Beast Tamer"
+  }
+  ]);
+
+  const addNewTeamName = addName => {
+    const newName = {
+      title: addName.title,
+      type: addName.type,
+    };
+    addTeamName([...teamName, newName])
+  };
 
   return (
       <div>
         <h1>Names</h1>
-        <FormComponent />
+        <FormComponent addNewTeamName={addNewTeamName} />
         <Route exact path="/" component={TeamNames}/>
 
       </div>
